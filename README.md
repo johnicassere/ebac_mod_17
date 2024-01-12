@@ -137,3 +137,32 @@ Você pode atualizar ou adicionar novos valores a um map atribuindo um novo valo
 Os maps são especialmente úteis quando combinados com mixins. 
 Você pode passar um map como argumento para um mixin e utilizar os valores correspondentes dentro do mixin. Isso permite criar mixins altamente flexíveis e configuráveis.
 ```
+**Sobre o escaping**
+```
+Trata-se de um recurso do LESS usado para armazenar uma string que poderá ser utilizada para construir uma regra de estilo. 
+É feito usando o caractere ~ (til) 
+seguido do valor ou expressão que deseja escapar. 
+Exemplo: 
+@desktopBreakpoint: ~”(min-width: 1023px)”; // escaping 
+@media @desktopBreakpoint{ // @media (min-width: 1023px)     
+body {          
+    font-size: 1.2em;
+ } 
+ }
+
+```
+
+**Sobre os mixins**
+```
+Com os mixins podemos escrever porções de estilos que 
+iremos reutilizar em diversos seletores. 
+Para escrever um mixin seguimos a estrutura:
+.nomeDoMixin( ) {       
+    // Estilização 
+    }
+.classe {      
+    .nomeDoMixin( ); 
+    // utilização 
+    }
+
+```

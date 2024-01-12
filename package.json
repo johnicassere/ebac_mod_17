@@ -1,0 +1,17 @@
+{
+  "name": "ebac_mod_17",
+  "version": "1.0.0",
+  "description": "**Comandos**",
+  "main": "index.js",
+  "scripts": {
+    "less": "less-watch-compiler ./src/style ./build/style main.less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3"
+  }
+}

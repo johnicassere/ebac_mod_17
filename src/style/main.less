@@ -1,0 +1,115 @@
+@import "mapas";
+
+@brackpointMobile: ~"(max-width: 767px)";
+@brackpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif, hevetica;
+}
+
+.marginBottom{
+    margin-bottom: 8px;
+}
+
+body{
+    background-color: #colors[background-color];
+    color: #colors[textColor];    
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    //height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    @media @brackpointMobile {
+        max-width: 70%;
+    }
+    @media @brackpointTablet {
+        max-width: 80%;
+    }
+}
+
+header{
+    padding-bottom: 24px;
+
+    .profile-avatar{
+        display: block;
+        margin: 24px auto;
+        border-radius: 50%;
+    }
+
+}
+
+.profile-bio{
+    text-align: center;
+    
+    &-name{
+        font-size: 24px;
+        text-shadow: 1px 1px 2px black;
+        .marginBottom();
+    }
+    &-subtitle{
+        font-size: 14px;
+        .marginBottom();
+    }
+    &-description{
+        font-size: 14px;
+        opacity: 0.7;
+        
+    }
+}
+
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+    li{
+        img{
+            transition: all ease .3s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.project-list{
+    margin-top: 32px;
+
+    &-item{
+        a{
+            text-decoration: none;
+            background-color: #colors[buttomColor];
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            text-align: center;
+            color: #colors[textColor];
+            font-weight: bold;
+            border-radius: 30px;
+            border: solid 2px #colors[buttomColor];
+            transition: all ease .5s;
+
+            &:hover{
+                color: #colors[buttomColor];
+                background-color: transparent;
+            }
+        }
+    }
+
+}
+
